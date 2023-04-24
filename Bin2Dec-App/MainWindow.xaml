@@ -6,7 +6,26 @@
         xmlns:local="clr-namespace:Bin2Dec_App"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
+    <Grid Background="AliceBlue">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+            <RowDefinition Height="*" />
+
+        </Grid.RowDefinitions>
+
+        <Label Content="Podaj liczbe w systemie binarnym" Margin="0,140,89,0" Height="27" VerticalAlignment="Top" HorizontalAlignment="Right" Width="292" Grid.RowSpan="2"/>
+        <TextBox  Grid.Row="1" x:Name="NumberBin2Dec" TextWrapping="Wrap" Margin="0,22,89,0" AutomationProperties.Name="NumberBin2Dec" TextChanged="NumberBin2Dec_TextChanged" HorizontalAlignment="Right" Width="292" Height="38" VerticalAlignment="Top"/>
+
+        <Label  Grid.Row="1" Content="Wynik w systemie dziesiętnym" Margin="0,68,89,0" HorizontalAlignment="Right" Width="292" Height="30" VerticalAlignment="Top" />
+        <TextBox  Grid.Row="1" x:Name="ResultBin2Dec" TextWrapping="Wrap" Margin="0,0,89,2" AutomationProperties.Name="ResultBin2Dec" Height="44" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="292"/>
+
+        <CheckBox  Grid.Row="1" Grid.Column="1"  x:Name="CheckAtUpdate" Content="Sprawdzanie w trakcie pisania" Margin="0,0,79,95" VerticalAlignment="Bottom" RenderTransformOrigin="-1.779,0.218" HorizontalAlignment="Right" Width="216"/>
+        <Button  Grid.Row="1" Grid.Column="1" Margin="0,63,105,0" Click="Button_Click" Content="Konwertuj" HorizontalAlignment="Right" Width="190" Height="30" VerticalAlignment="Top" />
 
     </Grid>
 </Window>

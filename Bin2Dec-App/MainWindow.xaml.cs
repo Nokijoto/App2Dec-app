@@ -63,6 +63,11 @@ namespace Bin2Dec_App
                 throw;
             }
         }
+
+        private void CheckAtUpdate_Checked(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 
     public static class TextBoxValueCheck

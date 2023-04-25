@@ -1,8 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "YLlPyDVd3vPUDlxrU44vmQYsRknWQ0nTGU3VylCNfAA081NJhgWyuQlBvPfqMF4vzobIncyMGSBG+HLRDGHqAA==",
+  "dgSpecHash": "crXqU0XwFZFaeZ4wmmeREBAV3Baf3k6J3OPKFUI7R6g+iE6Y1BeZZvS4qmAq1JGZ1oUmHUjUNqM1djsZo8Vcng==",
   "success": true,
   "projectFilePath": "F:\\PROJEKTY\\2023\\C#\\Bin2Dec-App\\Bin2Dec-App\\Bin2Dec-App.csproj",
-  "expectedPackageFiles": [],
+  "expectedPackageFiles": [
+    "C:\\Users\\Rexma\\.nuget\\packages\\microsoft.netcore.app.host.win-x64\\3.1.32\\microsoft.netcore.app.host.win-x64.3.1.32.nupkg.sha512"
+  ],
   "logs": []
 }

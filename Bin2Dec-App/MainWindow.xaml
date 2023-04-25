@@ -8,24 +8,39 @@
         Title="MainWindow" Height="450" Width="800">
     <Grid Background="AliceBlue">
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*"/>
-            <ColumnDefinition Width="*"/>
+            <ColumnDefinition Width="371*"/>
+            <ColumnDefinition Width="29*"/>
+            <ColumnDefinition Width="400*"/>
         </Grid.ColumnDefinitions>
         <Grid.RowDefinitions>
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="0.4*" />
+            <RowDefinition Height="3*" />
+            <RowDefinition Height="0.1*" />
 
         </Grid.RowDefinitions>
+        <Label Content="Binarne na Dziesiętne" FontSize="30" HorizontalAlignment="Left" VerticalAlignment="Center" Margin="10,0,0,0" Grid.ColumnSpan="3" Width="780" HorizontalContentAlignment="Center" />
 
-        <Label Content="Podaj liczbe w systemie binarnym" Margin="0,140,89,0" Height="27" VerticalAlignment="Top" HorizontalAlignment="Right" Width="292" Grid.RowSpan="2"/>
-        <TextBox  Grid.Row="1" x:Name="NumberBin2Dec" TextWrapping="Wrap" Margin="0,22,89,0" AutomationProperties.Name="NumberBin2Dec" TextChanged="NumberBin2Dec_TextChanged" HorizontalAlignment="Right" Width="292" Height="38" VerticalAlignment="Top"/>
+        <Label Margin="10,10,10,10"  Content="Binarny to system liczbowy, na którym oparte są wszystkie komputery&#xD;&#xA; cyfrowe. Dlatego ważne jest, aby programiści rozumieli binarny&#xD;&#xA; lub bazowy 2, matematyka.&#xD;&#xA; Celem Bin2Dec jest zapewnienie praktyki i zrozumienie, jak&#xD;&#xA; obliczenia binarne.&#xD;&#xA;&#xD;&#xA;" Grid.Column="2" Grid.Row="1" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" HorizontalAlignment="Left" VerticalAlignment="Top"/>
 
-        <Label  Grid.Row="1" Content="Wynik w systemie dziesiętnym" Margin="0,68,89,0" HorizontalAlignment="Right" Width="292" Height="30" VerticalAlignment="Top" />
-        <TextBox  Grid.Row="1" x:Name="ResultBin2Dec" TextWrapping="Wrap" Margin="0,0,89,2" AutomationProperties.Name="ResultBin2Dec" Height="44" VerticalAlignment="Bottom" HorizontalAlignment="Right" Width="292"/>
 
-        <CheckBox  Grid.Row="1" Grid.Column="1"  x:Name="CheckAtUpdate" Content="Sprawdzanie w trakcie pisania" Margin="0,0,79,95" VerticalAlignment="Bottom" RenderTransformOrigin="-1.779,0.218" HorizontalAlignment="Right" Width="216"/>
-        <Button  Grid.Row="1" Grid.Column="1" Margin="0,63,105,0" Click="Button_Click" Content="Konwertuj" HorizontalAlignment="Right" Width="190" Height="30" VerticalAlignment="Top" />
+
+
+
+        <StackPanel Grid.Row="1" Margin="10,10,10,10">
+            <StackPanel>
+                <Label Content="Podaj liczbe w systemie binarnym" Height="27" Width="291"/>
+                <TextBox x:Name="NumberBin2Dec" TextWrapping="Wrap" AutomationProperties.Name="NumberBin2Dec" TextChanged="NumberBin2Dec_TextChanged" Width="291" Height="38"/>
+            </StackPanel>
+            <StackPanel >
+                <Label Content="Wynik w systemie dziesiętnym" Width="328" Height="38" />
+                <TextBox x:Name="ResultBin2Dec" TextWrapping="Wrap" AutomationProperties.Name="ResultBin2Dec" Height="59" Width="330" Margin="1"/>
+            </StackPanel>
+
+            <StackPanel Height="69">
+                <Button Click="Button_Click" Content="Konwertuj" Width="300" Height="30" Margin="10" />
+                <CheckBox  x:Name="CheckAtUpdate" Content="Sprawdzanie w trakcie pisania" RenderTransformOrigin="-1.779,0.218" Width="216" Checked="CheckAtUpdate_Checked"/>
+            </StackPanel>
+        </StackPanel>
 
     </Grid>
 </Window>
